@@ -18,6 +18,9 @@ const Navbar = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
+          <li>
+            <NavLink to="/addTouristSpot">Add Tourist Spot</NavLink>
+          </li>
           
         </>
       );
@@ -40,7 +43,7 @@ const Navbar = () => {
           {" "}
           <img
             className="w-7"
-            src="https://i.ibb.co/mJ1wHr2/primeplaces.png"
+            src="https://i.ibb.co/MkNS6bT/tourist-IQ.png"
             alt=""
           />{" "}
           <span className="hidden z-0 md:flex">TouristIQ</span>
@@ -76,9 +79,14 @@ const Navbar = () => {
             </button>
           </>
         ) : (
-          <Link to="/login" className="btn">
-            Sign in
-          </Link>
+          <div className="flex gap-5">
+            <Link to="/login" className="btn">
+              Sign in
+            </Link>
+            <Link to="/register" className="btn">
+              Register
+            </Link>
+          </div>
         )}
       </div>
     </div>

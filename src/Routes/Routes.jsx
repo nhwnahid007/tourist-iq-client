@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Root from "../layout/Root";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login></Login>
+        },
+        {
+          path: '/addTouristSpot',
+          element: <AddTouristSpot></AddTouristSpot>
         },
       ]
     },
