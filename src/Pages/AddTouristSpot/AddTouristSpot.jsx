@@ -1,5 +1,13 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+
+
 const AddTouristSpot = () => {
+  const {user} = useContext(AuthContext)
+  console.log(user)
   const handleAddTourist = (event) => {
+   
     event.preventDefault();
     const form = event.target;
 
@@ -11,7 +19,7 @@ const AddTouristSpot = () => {
     const season = form.season.value;
     const time = form.time.value;
     const number = form.number.value;
-    const email = form.email.value; // Corrected typo
+    const email = form.email.value; 
     const name = form.name.value;
     const photo = form.photo.value;
 
@@ -29,14 +37,35 @@ const AddTouristSpot = () => {
       photo,
     };
     console.log(newTourist);
+    //send data to the server\
+    fetch("http://localhost:5000/tourist", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newTourist),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Info added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
   return (
     <div className="flex justify-center">
       <form
         onSubmit={handleAddTourist}
-        className=" border hover:border-black p-5 backdrop-blur-sm rounded-3xl"
+        className=" border bg-[#F5F7FA] hover:border-black p-5 backdrop-blur-sm rounded-3xl"
       >
-        <h2 className="text-black text-center mb-10"> Add Tourist spot </h2>
+        <h2 className="text-black text-3xl font-lora text-center mb-10"> Add Tourist spot </h2>
         {/* Form name and quantity row */}
         <div className="lg:flex gap-x-5">
           <div className="form-control">
@@ -51,21 +80,24 @@ const AddTouristSpot = () => {
               className="input input-bordered"
               placeholder="Enter sopt name"
               name="spot"
+              required
             />
           </div>
 
-          <div className="form-control ">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text font-poppins text-black font-semibold">
-                {" "}
-                Country Name{" "}
+                Country Name
               </span>
             </label>
-            <input
-              className="input input-bordered "
-              placeholder="Enter country name"
-              name="country"
-            />
+            <select required className="input input-bordered" name="country">
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Vietnam">Vietname</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Cambodia">Cambodia</option>
+            </select>
           </div>
         </div>
         {/* Form row end */}
@@ -83,6 +115,7 @@ const AddTouristSpot = () => {
               className="input input-bordered "
               placeholder="Enter location"
               name="location"
+              
             />
           </div>
 
@@ -175,11 +208,15 @@ const AddTouristSpot = () => {
                 User Email{" "}
               </span>
             </label>
-            <input
+            {
+              user?.email? <input className="input input-bordered " readOnly type="text" name="email" placeholder="email" id="" defaultValue={user?.email} /> : <input
               className="input input-bordered "
               placeholder="Enter your mail"
               name="email"
+              required
+              
             />
+            }
           </div>
 
           <div className="form-control ">
