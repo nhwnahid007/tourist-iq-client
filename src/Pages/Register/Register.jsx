@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { AuthContext } from "../../Providers/AuthProvider";
 
@@ -8,7 +8,10 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Register = () => {
     const [registerError, setRegisterError] = useState();
     const [showPassword, setShowPassword] = useState(false);
-    const {createUser} = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || "/";
+    const {createUser,updateUserProfile,setUser} = useContext(AuthContext)
     const handleRegister = (e) => {
         e.preventDefault();
         console.log(e.currentTarget);
@@ -50,6 +53,14 @@ const Register = () => {
         setRegisterError("");
         createUser(email, password)
           .then(() => {
+
+            updateUserProfile(name,photoUrl)
+        .then(()=>{
+          setUser({displayName : name, photoURL : photoUrl})
+            navigate(from)
+    
+        })
+
             swal("Good job!", "Successfully Registered!","success");
             
           })
