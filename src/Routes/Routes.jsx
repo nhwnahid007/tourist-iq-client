@@ -5,6 +5,8 @@ import Root from "../layout/Root";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
+import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -29,7 +31,12 @@ const router = createBrowserRouter([
         },
         {
           path: '/addTouristSpot',
-          element: <AddTouristSpot></AddTouristSpot>
+          element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
+        },
+        {
+          path: '/allTouristSpot',
+          element: <AllTouristSpot></AllTouristSpot>,
+          loader: () => fetch('http://localhost:5000/tourist')
         },
       ]
     },

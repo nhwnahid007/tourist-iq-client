@@ -6,8 +6,7 @@ const Home = () => {
   const limitedTourists = tourists.slice(0, 6);
   return (
     <div>
-      <h1>This is home </h1>
-      <p>{tourists.length}</p>
+      
 
     <div className="grid bg-base-200 lg:grid-cols-2">
         {
