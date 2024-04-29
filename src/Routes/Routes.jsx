@@ -8,6 +8,8 @@ import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import MyList from "../Pages/MyList/MyList";
+import Update from "../Pages/Update/Update";
 
 
 
@@ -48,6 +50,16 @@ const router = createBrowserRouter([
           ),
           loader: () => fetch("http://localhost:5000/tourist"),
         },
+
+        {
+          path: 'myList',
+          element:<MyList></MyList>
+        },
+        {
+          path: '/Update/:_id',
+          element: <Update></Update>,
+          loader: () => fetch("http://localhost:5000/tourist"),
+        }
       ]
     },
     
