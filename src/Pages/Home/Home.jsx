@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import TouristCard from "../../components/TouristCard/TouristCard";
+import Banner from "../../components/Banner/Banner";
 
 const Home = () => {
   const tourists = useLoaderData();
@@ -7,8 +8,9 @@ const Home = () => {
   return (
     <div>
       
+      <Banner></Banner>
 
-    <div className="grid bg-base-200 lg:grid-cols-2">
+    <div id="tourists" className="grid bg-base-200 lg:grid-cols-2">
         {
             limitedTourists.map(tourist => <TouristCard key={tourist.id} tourist={tourist} ></TouristCard>)
         }
