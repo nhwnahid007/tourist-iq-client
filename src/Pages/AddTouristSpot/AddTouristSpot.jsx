@@ -92,7 +92,7 @@ const AddTouristSpot = () => {
             </label>
             <select required className="input input-bordered" name="country">
               <option value="Bangladesh">Bangladesh</option>
-              <option value="Vietnam">Vietname</option>
+              <option value="Vietnam">Vietnam</option>
               <option value="Singapore">Singapore</option>
               <option value="Thailand">Thailand</option>
               <option value="Malaysia">Malaysia</option>
