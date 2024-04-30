@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AllTouristsCard from "../../components/AllTouristsCard/AllTouristsCard";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristSpot = () => {
     const touristsSpot = useLoaderData();
@@ -24,6 +25,9 @@ const AllTouristSpot = () => {
 
     return (
         <div className="flex flex-col items-center">
+            <Helmet>
+        <title>All Tourist Spot</title>
+      </Helmet>
             <div className="mb-4">
                 {/* Dropdown menu for sorting */}
                 <select

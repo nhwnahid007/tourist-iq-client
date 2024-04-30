@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useLoaderData, useParams } from "react-router-dom";
 import ViewCountryDetails from "../ViewCountryDetails.jsx/ViewCountryDetails";
+import { Helmet } from "react-helmet-async";
 
 const ViewCountry = () => {
   const { name } = useParams();
@@ -25,7 +26,9 @@ console.log(filterCountry)
 console.log(filterCountry)
   return (
     <div>
-      <p>View country</p>
+      <Helmet>
+        <title>View Country</title>
+      </Helmet>
       
       {/* Display country data here */}
       <div className="grid bg-base-200 lg:grid-cols-2">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { CiCloudSun } from "react-icons/ci";
 import { FaEye, FaLocationArrow, FaRegClock } from "react-icons/fa";
 import { MdBookmarkAdded, MdEmail, MdOutlinePriceCheck } from "react-icons/md";
@@ -13,6 +14,9 @@ const ViewDetails = () => {
     const {photo,description,spot,country,time,price,season,location,number,name,email} = tourist
     return (
         <div>
+          <Helmet>
+        <title>View Details</title>
+      </Helmet>
             <h1>{}</h1>
             <div className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
         {/* Image Column */}

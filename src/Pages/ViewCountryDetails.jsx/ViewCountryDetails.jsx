@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Helmet } from "react-helmet-async";
 import { FaLocationArrow, FaRegClock } from "react-icons/fa";
 import { MdOutlinePriceCheck } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -10,6 +11,9 @@ const ViewCountryDetails = ({countries}) => {
     const {_id, photo, spot, location,country,time,price } = countries;
     return (
         <div>
+            <Helmet>
+        <title>View Country Details</title>
+      </Helmet>
            <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
         <div className="rounded overflow-hidden flex flex-col max-w-xl mx-auto">
           <a href="#">

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const AddTouristSpot = () => {
@@ -61,6 +62,9 @@ const AddTouristSpot = () => {
   };
   return (
     <div className="flex justify-center">
+      <Helmet>
+        <title>Add Tourist spot</title>
+      </Helmet>
       <form
         onSubmit={handleAddTourist}
         className=" border bg-[#F5F7FA] hover:border-black p-5 backdrop-blur-sm rounded-3xl"

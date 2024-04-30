@@ -3,6 +3,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -48,6 +49,9 @@ const Login = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col ">
           <div className="text-center ">

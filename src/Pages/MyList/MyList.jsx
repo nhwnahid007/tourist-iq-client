@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -49,7 +50,9 @@ const MyList = () => {
 }
   return (
     <div>
-      <p>list</p>
+      <Helmet>
+        <title>My List</title>
+      </Helmet>
 
       <div className="overflow-x-auto">
         <table className="table">

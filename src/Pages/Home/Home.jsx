@@ -6,13 +6,16 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import CustomerReviews from "../../components/Reviews/CustomerReviews";
 
 import Countries from "../../components/Countries/Countries";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const tourists = useLoaderData();
   const limitedTourists = tourists.slice(0, 6);
   return (
     <div>
-      
+      <Helmet>
+        <title>TouristIQ</title>
+      </Helmet>
       <Banner></Banner>
 
     <div id="tourists" className="grid bg-base-200 lg:grid-cols-2">

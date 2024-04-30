@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Update = () => {
     const {user} =useContext(AuthContext)
@@ -78,7 +79,9 @@ const Update = () => {
   };
   return (
     <div>
-      <h1>Update</h1>
+      <Helmet>
+        <title>Update</title>
+      </Helmet>
       <div className="flex justify-center">
         <form
           onSubmit={handleUpdateTourist}

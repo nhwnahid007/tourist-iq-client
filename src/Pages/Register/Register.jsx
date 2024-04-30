@@ -3,6 +3,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -81,6 +82,9 @@ const Register = () => {
 
     return (
         <div>
+          <Helmet>
+        <title>Register</title>
+      </Helmet>
            <div className="hero-content mx-auto flex-col">
         <div className="text-center ">
           <h1 className="text-5xl font-bold">Register now!</h1>
