@@ -5,6 +5,8 @@ import Reviews from "../../components/Reviews/Reviews";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import CustomerReviews from "../../components/Reviews/CustomerReviews";
 
+import Countries from "../../components/Countries/Countries";
+
 const Home = () => {
   const tourists = useLoaderData();
   const limitedTourists = tourists.slice(0, 6);
@@ -18,6 +20,9 @@ const Home = () => {
             limitedTourists.map(tourist => <TouristCard key={tourist.id} tourist={tourist} ></TouristCard>)
         }
     </div>
+
+     <Countries></Countries>
+
 
     <div className="lg:flex mt-10 items-center"><Reviews></Reviews>
     <CustomerReviews></CustomerReviews>
