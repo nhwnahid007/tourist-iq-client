@@ -40,6 +40,8 @@ const MyList = () => {
                             text: "Your file has been deleted.",
                             icon: "success"
                         });
+                        const remaining = list.filter(remainingList => remainingList._id !== _id)
+                        setList(remaining)
                     }
                 })
         }

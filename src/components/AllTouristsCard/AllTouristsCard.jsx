@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { CiCloudSun } from "react-icons/ci";
-import { FaLocationArrow, FaRegClock } from "react-icons/fa";
+import { FaEye, FaLocationArrow, FaRegClock } from "react-icons/fa";
 import { MdOutlinePriceCheck } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AllTouristsCard = ({ allTourist }) => {
-  const { _id, photo, spot, location, country, time, price,season } = allTourist;
+  const { _id, photo, spot,number, location, country, time, price,season } = allTourist;
   return (
     <div>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
@@ -26,6 +26,9 @@ const AllTouristsCard = ({ allTourist }) => {
             </a>
             <p className="text-gray-500 flex gap-2 items-center text-sm">
             <FaLocationArrow />{location}, {country}
+            </p>
+            <p className="text-gray-500 gap-2 flex items-center text-sm">
+            Visited since last year: <FaEye /> {number}
             </p>
             <p className="text-gray-500 gap-2 flex items-center text-sm">
             <FaRegClock /> For {time}
