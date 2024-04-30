@@ -295,7 +295,7 @@ const Update = () => {
           <input
             className="btn hover:bg-yellow-500 focus:ring-2 focus:ring-green-400 focus:outline-none font-semibold text-white px-6 py-3 rounded-md shadow-md transition duration-300 ease-in-out w-full mt-5 bg-[#D2B48C]"
             type="submit"
-            value="Add "
+            value="Update"
           />
         </form>
       </div>

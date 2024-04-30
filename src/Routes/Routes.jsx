@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import MyList from "../Pages/MyList/MyList";
 import Update from "../Pages/Update/Update";
+import ViewCountry from "../Pages/ViewCountry/ViewCountry";
 
 
 
@@ -59,6 +60,13 @@ const router = createBrowserRouter([
           path: '/Update/:_id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
           loader: () => fetch("http://localhost:5000/tourist"),
+        },
+        {
+          path: '/countries/:name',
+          element:
+            <ViewCountry></ViewCountry>,
+           
+          
         },
         
       ]
