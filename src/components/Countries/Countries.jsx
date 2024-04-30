@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
@@ -21,7 +22,8 @@ const Countries = () => {
        
         {countries.map((country) => (
           <Link to={`/countries/${country.name}`} key={country._id}>
-            <div className="card card-side md:w-[500px] md:h-[400px] h-[300px] hover:scale-105 hover:cursor-pointer bg-base-100 shadow-xl">
+            <div className=" my-anchor-element card card-side md:w-[500px] md:h-[400px] h-[300px] hover:scale-105 hover:cursor-pointer bg-base-100 shadow-xl">
+            
               <figure>
                 <img
                   className=" md:w-[500px] w-[300px]  mx-3 h-full object-cover"

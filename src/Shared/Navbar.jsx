@@ -4,22 +4,22 @@ import { Link, NavLink } from "react-router-dom";
 import swal from "sweetalert";
 import { AuthContext } from "../Providers/AuthProvider";
 
+
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
-  useEffect(()=>{
-    localStorage.setItem('theme',theme)
-    const localTheme = localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme',localTheme)
-  },[theme])
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
   const handleToggle = (e) => {
-    if (e.target.checked){
-      setTheme('dark')
-    }
-    else{
-      setTheme('light')
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
     }
   };
-  console.log(theme)
+  console.log(theme);
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   const handleSignOut = () => {
@@ -76,12 +76,13 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="navbar-end space-x-2">
+      <div className="navbar-end my-anchor-element space-x-2">
+        
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
-            className="theme-controller"
+            className="theme-controller "
             value="synthwave"
             onChange={handleToggle}
           />

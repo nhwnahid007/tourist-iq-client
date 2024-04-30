@@ -7,6 +7,7 @@ import CustomerReviews from "../../components/Reviews/CustomerReviews";
 
 import Countries from "../../components/Countries/Countries";
 import { Helmet } from "react-helmet-async";
+import Title from "../../components/Title/Title";
 
 const Home = () => {
   const tourists = useLoaderData();
@@ -16,6 +17,7 @@ const Home = () => {
       <Helmet>
         <title>TouristIQ</title>
       </Helmet>
+      <div className="flex justify-center items-center"><Title></Title></div>
       <Banner></Banner>
 
     <div id="tourists" className="grid bg-base-200 lg:grid-cols-2">

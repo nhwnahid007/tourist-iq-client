@@ -1,34 +1,32 @@
-
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Tooltip } from "react-tooltip";
 
 const Update = () => {
-    const {user} =useContext(AuthContext)
-    const tourists = useLoaderData()
-    const {_id} = useParams()
-    console.log(_id)
-    const touristData = tourists.find((tourist) => tourist._id === _id);
-    console.log(touristData)
-    const {
-        spot,
-        country,
-        location,
-        description,
-        price,
-        season,
-        time,
-        number,
-        email,
-        name,
-        photo,
-      } = touristData;
- 
- 
-  console.log(touristData)
+  const { user } = useContext(AuthContext);
+  const tourists = useLoaderData();
+  const { _id } = useParams();
+  console.log(_id);
+  const touristData = tourists.find((tourist) => tourist._id === _id);
+  console.log(touristData);
+  const {
+    spot,
+    country,
+    location,
+    description,
+    price,
+    season,
+    time,
+    number,
+    email,
+    name,
+    photo,
+  } = touristData;
 
+  console.log(touristData);
 
   const handleUpdateTourist = (event) => {
     event.preventDefault();
@@ -41,7 +39,7 @@ const Update = () => {
     const updatedSeason = form.season.value;
     const updatedTime = form.time.value;
     const updatedNumber = form.number.value;
-   
+
     const updatedPhoto = form.photo.value;
 
     const updatedTourist = {
@@ -116,8 +114,12 @@ const Update = () => {
                   Country Name
                 </span>
               </label>
-              <select required className="input input-bordered" name="country" defaultValue={country}>
-                
+              <select
+                required
+                className="input input-bordered"
+                name="country"
+                defaultValue={country}
+              >
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Vietnam">Vietnam</option>
                 <option value="Singapore">Singapore</option>
@@ -234,6 +236,9 @@ const Update = () => {
           {/* Form categoty row */}
           <div className="lg:flex gap-x-5">
             <div className="form-control">
+              <Tooltip anchorSelect=".my-anchor-element" place="top">
+                No need to update
+              </Tooltip>
               <label className="label">
                 <span className="label-text font-poppins text-black font-semibold">
                   {" "}
@@ -242,7 +247,7 @@ const Update = () => {
               </label>
               {user?.email ? (
                 <input
-                  className="input input-bordered "
+                  className="input input-bordered my-anchor-element "
                   readOnly
                   type="text"
                   name="email"

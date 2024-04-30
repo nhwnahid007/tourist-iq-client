@@ -54,7 +54,7 @@ const MyList = () => {
         <title>My List</title>
       </Helmet>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto min-h-screen">
         <table className="table">
           {/* head */}
           <thead>
