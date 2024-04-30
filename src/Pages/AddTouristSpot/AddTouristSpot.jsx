@@ -39,7 +39,7 @@ const AddTouristSpot = () => {
     };
     console.log(newTourist);
     //send data to the server\
-    fetch("http://localhost:5000/tourist", {
+    fetch("https://tourist-iq-server.vercel.app/tourist", {
       method: "POST",
       headers: {
         "content-type": "application/json",

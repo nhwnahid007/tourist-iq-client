@@ -48,7 +48,12 @@ const Login = () => {
       });
   };
   return (
-    <div>
+    <div data-aos="zoom-out-down"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center">
       <Helmet>
         <title>Login</title>
       </Helmet>

@@ -10,7 +10,7 @@ const ViewCountry = () => {
   const [countries, setCountries] = useState([]);
 console.log(loadecountries)
   useEffect(() => {
-    fetch('http://localhost:5000/tourist') // Corrected URL
+    fetch('https://tourist-iq-server.vercel.app/tourist') // Corrected URL
       .then((res) => res.json())
       .then((data) => {
         console.log(data)

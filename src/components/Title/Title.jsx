@@ -5,7 +5,7 @@ const Title = () => {
     
     return (
         <div>
-             <h1 className='py-4 font-lora text-3xl' style={{  margin: 'auto 0', fontWeight: 'normal' }}>
+             <h1 className='animate__animated animate__backInDown  py-4 font-lora text-3xl' style={{  margin: 'auto 0', fontWeight: 'normal' }}>
         Life is simple{' '}
         <span style={{ color: 'red', fontWeight: 'bold' }}>
          

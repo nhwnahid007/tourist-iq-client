@@ -8,7 +8,7 @@ const MyList = () => {
   const { user } = useContext(AuthContext);
   const [list, setList] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/MyList/${user?.email}`)
+    fetch(`https://tourist-iq-server.vercel.app/MyList/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setList(data);
@@ -29,7 +29,7 @@ const MyList = () => {
     }).then((result) => {
         if (result.isConfirmed) {
 
-            fetch(`http://localhost:5000/tourist/${_id}`, {
+            fetch(`https://tourist-iq-server.vercel.app/tourist/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

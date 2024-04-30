@@ -17,22 +17,30 @@ const Home = () => {
       <Helmet>
         <title>TouristIQ</title>
       </Helmet>
-      <div className="flex justify-center items-center"><Title></Title></div>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-center"
+        className="flex justify-center items-center"
+      >
+        <Title></Title>
+      </div>
       <Banner></Banner>
 
-    <div id="tourists" className="grid bg-base-200 lg:grid-cols-2">
-        {
-            limitedTourists.map(tourist => <TouristCard key={tourist.id} tourist={tourist} ></TouristCard>)
-        }
-    </div>
+      <div id="tourists" className="grid bg-base-200 lg:grid-cols-2">
+        {limitedTourists.map((tourist) => (
+          <TouristCard key={tourist.id} tourist={tourist}></TouristCard>
+        ))}
+      </div>
 
-     <Countries></Countries>
+      <Countries></Countries>
 
-
-    <div className="lg:flex mt-10 items-center"><Reviews></Reviews>
-    <CustomerReviews></CustomerReviews>
-    </div>
-    <Testimonial></Testimonial>
+      <div className="lg:flex mt-10 items-center">
+        <Reviews></Reviews>
+        <CustomerReviews></CustomerReviews>
+      </div>
+      <Testimonial></Testimonial>
     </div>
   );
 };

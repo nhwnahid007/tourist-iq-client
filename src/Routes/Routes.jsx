@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/tourist')
+            loader: () => fetch('https://tourist-iq-server.vercel.app/tourist')
         },
         {
             path: '/register',
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path: '/allTouristSpot',
           element: <AllTouristSpot></AllTouristSpot>,
-          loader: () => fetch('http://localhost:5000/tourist')
+          loader: () => fetch('https://tourist-iq-server.vercel.app/tourist')
         },
         {
           path: "/tourist/:_id",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
               <ViewDetails></ViewDetails>
             </PrivateRoute>
           ),
-          loader: () => fetch("http://localhost:5000/tourist"),
+          loader: () => fetch("https://tourist-iq-server.vercel.app/tourist"),
         },
 
         {
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         {
           path: '/Update/:_id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
-          loader: () => fetch("http://localhost:5000/tourist"),
+          loader: () => fetch("https://tourist-iq-server.vercel.app/tourist"),
         },
         {
           path: '/countries/:name',

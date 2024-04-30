@@ -2,9 +2,9 @@
 
 These features and characteristics position Prime Places as a premier destination for luxury estate seekers, offering unparalleled properties, services, and experiences in the world of upscale real estate.These features and characteristics position Prime Places as a premier destination for luxury estate seekers, offering unparalleled properties, services, and experiences in the world of upscale real estate.
 
- ## [Prime Places](https://prime-places.web.app)
+ ## [TouristIQ](https://tourist-iq.web.app/)
 
-  check out our website [https://prime-places.web.app](https://prime-places.web.app).
+  check out our website [https://tourist-iq.web.app/](https://tourist-iq.web.app/).
 
 
 

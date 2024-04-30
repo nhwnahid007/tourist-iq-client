@@ -24,7 +24,12 @@ const AllTouristSpot = () => {
     });
 
     return (
-        <div className="flex flex-col items-center">
+        <div data-aos="flip-right"
+
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        
+        data-aos-anchor-placement="top-center" className="flex flex-col items-center">
             <Helmet>
         <title>All Tourist Spot</title>
       </Helmet>
