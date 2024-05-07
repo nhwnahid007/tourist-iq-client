@@ -16,45 +16,52 @@ const MyList = () => {
   }, [user]);
   console.log(list);
 
-  const handleDelete = _id => {
+  const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-        if (result.isConfirmed) {
-
-            fetch(`https://tourist-iq-server.vercel.app/tourist/${_id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "Your file has been deleted.",
-                            icon: "success"
-                        });
-                        const remaining = list.filter(remainingList => remainingList._id !== _id)
-                        setList(remaining)
-                    }
-                })
-        }
+      if (result.isConfirmed) {
+        fetch(`https://tourist-iq-server.vercel.app/tourist/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+              const remaining = list.filter(
+                (remainingList) => remainingList._id !== _id
+              );
+              setList(remaining);
+            }
+          });
+      }
     });
-}
+  };
   return (
     <div>
       <Helmet>
         <title>My List</title>
       </Helmet>
 
-      <div className="overflow-x-auto min-h-screen">
+      <div
+        data-aos="flip-left"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-center"
+        className="overflow-x-auto min-h-screen"
+      >
         <table className="table">
           {/* head */}
           <thead>
@@ -75,10 +82,18 @@ const MyList = () => {
                 <td>{singleList.time}</td>
                 <td>{singleList.price}$ Per person</td>
                 <td>
-                  <Link to={`/Update/${singleList._id}`} className="btn">Update</Link>
+                  <Link to={`/Update/${singleList._id}`} className="btn">
+                    Update
+                  </Link>
                 </td>
                 <td>
-                <button onClick={() => handleDelete(singleList._id)} className='btn'> Delete </button>
+                  <button
+                    onClick={() => handleDelete(singleList._id)}
+                    className="btn"
+                  >
+                    {" "}
+                    Delete{" "}
+                  </button>
                 </td>
               </tr>
             ))}

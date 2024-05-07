@@ -80,7 +80,13 @@ const Update = () => {
       <Helmet>
         <title>Update</title>
       </Helmet>
-      <div className="flex justify-center">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-center"
+        className="flex justify-center"
+      >
         <form
           onSubmit={handleUpdateTourist}
           className=" border bg-[#F5F7FA] hover:border-black p-5 backdrop-blur-sm rounded-3xl"

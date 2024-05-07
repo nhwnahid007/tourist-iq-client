@@ -13,15 +13,15 @@ const Home = () => {
   const tourists = useLoaderData();
   const limitedTourists = tourists.slice(0, 6);
   return (
-    <div>
+    <div  data-aos="fade-up"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-anchor-placement="top-center">
       <Helmet>
         <title>TouristIQ</title>
       </Helmet>
       <div
-        data-aos="fade-up"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="top-center"
+       
         className="flex justify-center items-center"
       >
         <Title></Title>
@@ -36,9 +36,9 @@ const Home = () => {
 
       <Countries></Countries>
 
-      <div className="lg:flex mt-10 items-center">
-        <Reviews></Reviews>
-        <CustomerReviews></CustomerReviews>
+      <div className="lg:flex mt-10 justify-center items-center">
+        <div className="mx-auto"><Reviews></Reviews></div>
+        <div className="mx-auto"><CustomerReviews></CustomerReviews></div>
       </div>
       <Testimonial></Testimonial>
     </div>

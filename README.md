@@ -1,6 +1,7 @@
-# TouristIQ
+# TouristIQ 
+# Catergory: SouthEast Asia
 
-These features and characteristics position Prime Places as a premier destination for luxury estate seekers, offering unparalleled properties, services, and experiences in the world of upscale real estate.These features and characteristics position Prime Places as a premier destination for luxury estate seekers, offering unparalleled properties, services, and experiences in the world of upscale real estate.
+TravelIQ is your passport to seamless travel experiences. With personalized recommendations, comprehensive guides, interactive trip planning tools, a vibrant community, and real-time updates, TravelIQ empowers adventurers to explore the world confidently, connect with fellow travelers, and make every journey unforgettable.
 
  ## [TouristIQ](https://tourist-iq.web.app/)
 

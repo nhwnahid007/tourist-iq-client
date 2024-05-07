@@ -2,7 +2,7 @@
 
 const Reviews = () => {
     return (
-        <div className="flex flex-col items-center max-w-xl p-8 bg-white shadow-sm rounded-xl">
+        <div className="flex flex-col border justify-center items-center max-w-xl p-8 bg-white shadow-sm rounded-xl">
             <h2 className="text-3xl font-semibold mb-4">Customer Reviews</h2>
             <div className="flex flex-wrap justify-center items-center space-x-2">
                 <button type="button" title="Rate 1 stars" aria-label="Rate 1 stars">

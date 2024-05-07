@@ -38,25 +38,25 @@ const ViewDetails = () => {
               {description}
             </p>
 
-            <p className="text-gray-500 mt-5 flex gap-2 items-center text-sm">
+            <p className="   mt-5 flex gap-2 items-center text-sm">
             <FaLocationArrow />{location}, {country}
             </p>
-            <p className="text-gray-500 gap-2 flex items-center text-sm">
+            <p className="   gap-2 flex items-center text-sm">
             Visited since last year: <FaEye /> {number}
             </p>
-            <p className="text-gray-500 gap-2 flex items-center text-sm">
+            <p className="   gap-2 flex items-center text-sm">
             <FaRegClock /> For {time}
             </p>
-            <p className="text-gray-500 flex items-center gap-2 text-sm">
+            <p className="   flex items-center gap-2 text-sm">
             <MdOutlinePriceCheck />price of {price} $ Only
             </p>
-            <p className="text-gray-500 flex items-center gap-2 text-sm">
+            <p className="   flex items-center gap-2 text-sm">
             <CiCloudSun /> {season}
             </p>
-            <p className="text-gray-500 flex items-center gap-2 text-sm">
+            <p className="   flex items-center gap-2 text-sm">
             <MdBookmarkAdded /> Added by {name}
             </p>
-            <p className="text-gray-500 flex items-center gap-2 text-sm">
+            <p className="   flex items-center gap-2 text-sm">
             <MdEmail /> Email: {email}
             </p>
             {/* Button Container */}

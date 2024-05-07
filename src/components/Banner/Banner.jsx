@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../../Style/styles.css";
-
+import 'animate.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useRef } from "react";
@@ -44,14 +44,14 @@ const Banner = () => {
               alt=""
             />
             <div className="absolute  inset-0 flex justify-center items-center text-white text-lg font-semibold">
-              <div className="text-center">
+              <div className="text-center animate__animated animate__backInDown">
                 <h2 className="text-3xl  md:text-4xl lg:text-5xl leading-tight">
                   Discover Amazing Destinations
                 </h2>
-                <p className="mt-2 text-lg md:text-xl lg:text-2xl">
+                <p className=" text-lg md:text-xl lg:text-2xl">
                   Explore the worlds wonders with touristIQ
                 </p>
-                <button className="mt-4 px-6 py-3 bg-yellow-300 text-blue-900 rounded-full text-lg font-semibold hover:bg-yellow-500 transition duration-300">
+                <button className="mt-2 px-6 py-3 bg-yellow-300 text-blue-900 rounded-full text-lg font-semibold hover:bg-yellow-500 transition duration-300">
                 <a href="#tourists">Start Exploring</a>
                 </button>
               </div>

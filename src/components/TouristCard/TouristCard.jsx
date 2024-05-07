@@ -2,13 +2,13 @@
 import { FaLocationArrow, FaRegClock } from "react-icons/fa";
 import { MdOutlinePriceCheck } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
+
 
 const TouristCard = ({ tourist }) => {
   console.log(tourist);
   const {_id, photo, spot, location,country,time,price } = tourist;
   return (
-    <div data-tooltip-id="my-tooltip" data-tooltip-content="Click view details button to see details" className="my-anchor-element">
+    <div  data-tooltip-content="Click view details button to see details" className="my-anchor-element">
      
       <p></p>
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
@@ -36,9 +36,7 @@ const TouristCard = ({ tourist }) => {
               <span className="my-anchor-element relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 View Details
               </span>
-              <Tooltip anchorSelect=".my-anchor-element" place="top">
-          Click to see details
-        </Tooltip>
+              
             </Link>
           </div>
         </div>

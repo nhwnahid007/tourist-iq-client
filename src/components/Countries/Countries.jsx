@@ -26,7 +26,7 @@ const Countries = () => {
             
               <figure>
                 <img
-                  className=" md:w-[500px] w-[300px]  mx-3 h-full object-cover"
+                  className=" md:w-[500px] max-w-[300px]  mx-3 h-full object-cover"
                   src={country.image}
                   alt="Movie"
                 />

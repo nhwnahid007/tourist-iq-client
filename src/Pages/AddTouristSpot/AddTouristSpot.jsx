@@ -61,7 +61,12 @@ const AddTouristSpot = () => {
       });
   };
   return (
-    <div className="flex justify-center">
+    <div data-aos="zoom-out-down"
+
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    
+    data-aos-anchor-placement="top-center" className="flex justify-center ">
       <Helmet>
         <title>Add Tourist spot</title>
       </Helmet>

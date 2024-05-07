@@ -59,7 +59,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost flex items-center text-xl">
+        <Link to="/" className="btn p-0 btn-ghost flex items-center text-xl">
           {" "}
           <img
             className="w-7"
@@ -78,9 +78,10 @@ const Navbar = () => {
 
       <div className="navbar-end my-anchor-element space-x-2">
         
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate px-3">
           {/* this hidden checkbox controls the state */}
           <input
+          
             type="checkbox"
             className="theme-controller "
             value="synthwave"
@@ -122,16 +123,16 @@ const Navbar = () => {
               />
             </Link>
 
-            <button onClick={handleSignOut} className="btn font-bold">
+            <button onClick={handleSignOut} className="btn  font-bold">
               Logout
             </button>
           </>
         ) : (
-          <div className="flex gap-5">
-            <Link to="/login" className="btn">
+          <div className="flex gap-2 lg:gap-5">
+            <Link to="/login" className="btn p-1 md:p-3">
               Sign in
             </Link>
-            <Link to="/register" className="btn">
+            <Link to="/register" className="btn p-1 md:p-3">
               Register
             </Link>
           </div>
