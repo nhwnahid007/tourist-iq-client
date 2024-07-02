@@ -19,6 +19,47 @@ TravelIQ is your passport to seamless travel experiences. With personalized reco
  - Community Engagement and Sharing: TravelIQ fosters a vibrant community of travelers who share their experiences, tips, and insights with fellow members. Users can interact through forums, reviews, ratings, and social media integrations, facilitating knowledge exchange and collaboration. Additionally, travelers can showcase their adventures, photos, and travel journals, inspiring others and building connections with like-minded explorers.
  - Real-Time Travel Alerts and Updates: TravelIQ keeps users informed with real-time travel alerts, updates, and notifications to ensure smooth and hassle-free travel experiences. Whether it's weather advisories, flight delays, safety alerts, or special promotions, users receive timely information to adapt their plans and stay informed throughout their journey. This feature enhances convenience, safety, and peace of mind for travelers on the go.
 
+
+   # To run the development server locally, follow these steps:
+
+
+
+## Prerequisites
+
+- Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+## Installation and Running
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/nhwnahid007/tourist-iq-client.git
+    cd tourist-iq-client
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Run the Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+This will start the server
+
+## Additional Commands
+
+- **Build for Production:**
+    ```bash
+    npm run build
+    ```
+
+- **Run Tests:**
+    ```bash
+    npm test
+    ```
+
 # Package used:
 
 -  ## [React tooltip](https://www.npmjs.com/package/react-tooltip)
