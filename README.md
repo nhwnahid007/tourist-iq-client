@@ -60,6 +60,28 @@ This will start the server
     npm test
     ```
 
+
+    ## Environment Variables
+
+To set up your environment for this project, create a `.env.local` file in the root directory and add the following variables:
+
+```plaintext
+VITE_APIKEY=REPLACE_WITH_FIREBASE_API_KEY
+VITE_AUTHDOMAIN=REPLACE_WITH_FIREBASE_AUTH_DOMAIN
+VITE_PROJECTID=REPLACE_WITH_FIREBASE_PROJECT_ID
+VITE_STORAGEBUCKET=REPLACE_WITH_FIREBASE_STORAGE_BUCKET
+VITE_MESSAGINGSENDERID=REPLACE_WITH_FIREBASE_MESSAGING_SENDER_ID
+VITE_APPID=REPLACE_WITH_FIREBASE_APP_ID
+
+
+```
+
+Replace REPLACE_WITH_FIREBASE_* with your actual Firebase configuration values.
+
+
+You can copy this entire content and paste it directly into your `README.md` file. Remember to replace the placeholders (`REPLACE_WITH_*`) with your actual configuration values before using it.
+
+
 # Package used:
 
 -  ## [React tooltip](https://www.npmjs.com/package/react-tooltip)
